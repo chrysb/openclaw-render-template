@@ -4,7 +4,7 @@
 
 Deploy OpenClaw to Render in one click. Get a 24/7 AI agent connected to Telegram or Discord, with your entire config and workspace backed up to GitHub. No CLI required.
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/chrysbader/openclaw-render-template)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/chrysb/openclaw-render-template)
 
 ## The AlphaClaw Advantage
 
@@ -34,7 +34,7 @@ Only one variable is needed at deploy time:
 
 Click the button to deploy:
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/chrysbader/openclaw-render-template)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/chrysb/openclaw-render-template)
 
 Everything else — AI keys, GitHub credentials, channel tokens — is configured through the setup UI after your first login.
 
