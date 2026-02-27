@@ -1,0 +1,11 @@
+node_modules/
+data/
+.git/
+.env
+.DS_Store
+tests/
+.github/
+coverage/
+.cursor/
+agent-tools/
+*.log

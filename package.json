@@ -1,0 +1,19 @@
+{
+  "name": "openclaw-render",
+  "version": "2.0.0",
+  "private": true,
+  "description": "OpenClaw on Render — one-click deploy, powered by @chrysb/alphaclaw",
+  "scripts": {
+    "dev": "docker compose up --build",
+    "dev:stop": "docker compose down",
+    "dev:clean": "docker compose down -v",
+    "dev:logs": "docker compose logs -f",
+    "dev:shell": "docker compose exec openclaw bash"
+  },
+  "dependencies": {
+    "@chrysb/alphaclaw": "^0.1.13"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

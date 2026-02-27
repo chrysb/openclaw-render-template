@@ -1,0 +1,19 @@
+services:
+  - type: web
+    runtime: docker
+    name: openclaw
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: SETUP_PASSWORD
+        sync: false
+      - key: OPENCLAW_GATEWAY_TOKEN
+        generateValue: true
+      - key: WEBHOOK_TOKEN
+        generateValue: true
+      - key: PORT
+        value: 3000
+    disk:
+      name: openclaw-data
+      mountPath: /data
+      sizeGB: 10

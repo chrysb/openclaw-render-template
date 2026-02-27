@@ -1,0 +1,13 @@
+services:
+  openclaw:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    env_file: .env
+    volumes:
+      # Persistent data survives container restarts (like Render disks)
+      - openclaw-data:/data
+
+volumes:
+  openclaw-data:

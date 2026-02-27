@@ -1,0 +1,6 @@
+node_modules/
+data/
+.DS_Store
+.env
+.cursor/
+docker-compose.override.yml
