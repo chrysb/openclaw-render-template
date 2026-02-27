@@ -21,6 +21,12 @@ Deploy OpenClaw to Render in one click. Get a 24/7 AI agent connected to Telegra
 
 <img width="5594" height="3646" alt="image" src="https://github.com/user-attachments/assets/6aa18214-5870-4e01-9ff4-b23e0353179e" />
 
+## Pricing note
+
+Render uses **fixed-price instance tiers**, so you pay for reserved capacity regardless of utilization. An instance with enough RAM for OpenClaw (8 GB) runs ~$85/mo on Render's Standard plan. For comparison, the same workload on Railway's usage-based pricing typically costs **$5–10/mo** because an AI agent mostly idles between messages.
+
+If cost matters more than platform preference, consider the [Railway template](https://github.com/chrysb/openclaw-railway-template) instead — same one-click deploy, significantly cheaper for bursty workloads.
+
 ## Deploy
 
 Only one variable is needed at deploy time:
