@@ -1,7 +1,7 @@
 services:
   - type: web
     runtime: docker
-    name: openclaw
+    name: AlphaClaw
     plan: starter
     healthCheckPath: /health
     envVars:
