@@ -1,6 +1,6 @@
 FROM node:22-slim
 
-RUN apt-get update && apt-get install -y git curl procps python3 make g++ cron tini && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y git curl procps lsof python3 make g++ cron tini && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
