@@ -40,7 +40,7 @@ Only one variable is needed at deploy time:
 
 Click the button to deploy:
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/chrysb/openclaw-render-template)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/jjmata/openclaw-render-template)
 
 Everything else — AI keys, GitHub credentials, channel tokens — is configured through the setup UI after your first login.
 
