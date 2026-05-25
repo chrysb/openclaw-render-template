@@ -5,6 +5,11 @@ services:
     ports:
       - "${PORT:-3000}:${PORT:-3000}"
     env_file: .env
+    environment:
+      ALPHACLAW_CLAW_RUNTIME: denchclaw
+      ALPHACLAW_GATEWAY_PORT: "19001"
+      DENCHCLAW_DAEMONLESS: "1"
+      DENCHCLAW_WEB_PORT: "3100"
     volumes:
       # Persistent data survives container restarts (like Render disks)
       - openclaw-data:/data

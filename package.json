@@ -2,7 +2,7 @@
   "name": "openclaw-render",
   "version": "2.0.0",
   "private": true,
-  "description": "OpenClaw on Render — one-click deploy, powered by @chrysb/alphaclaw",
+  "description": "DenchClaw/OpenClaw on Render — one-click deploy, powered by AlphaClaw",
   "scripts": {
     "dev": "docker compose up --build",
     "dev:stop": "docker compose down",
@@ -11,7 +11,7 @@
     "dev:shell": "docker compose exec openclaw bash"
   },
   "dependencies": {
-    "@chrysb/alphaclaw": "0.9.16"
+    "@chrysb/alphaclaw": "https://github.com/jjmata/alphaclaw/archive/256e51a8b0bf5d74545ce96fc7bd60b03945cb71.tar.gz"
   },
   "engines": {
     "node": ">=22.14.0"

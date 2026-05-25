@@ -1,7 +1,7 @@
 services:
   - type: web
     runtime: docker
-    name: AlphaClaw
+    name: DenchClaw
     region: frankfurt
     plan: pro
     healthCheckPath: /health
@@ -14,6 +14,14 @@ services:
         generateValue: true
       - key: PORT
         value: 3000
+      - key: ALPHACLAW_CLAW_RUNTIME
+        value: denchclaw
+      - key: ALPHACLAW_GATEWAY_PORT
+        value: 19001
+      - key: DENCHCLAW_DAEMONLESS
+        value: 1
+      - key: DENCHCLAW_WEB_PORT
+        value: 3100
     disk:
       name: openclaw-data
       mountPath: /data
