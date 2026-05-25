@@ -11,7 +11,7 @@
     "dev:shell": "docker compose exec openclaw bash"
   },
   "dependencies": {
-    "@chrysb/alphaclaw": "https://github.com/jjmata/alphaclaw/archive/f7354a790f59cdc6b32bf22459bdb8673a15fffe.tar.gz",
+    "@chrysb/alphaclaw": "https://github.com/jjmata/alphaclaw/archive/cbb3be382086e027498ddb75153c1360fe9f1919.tar.gz",
     "denchclaw": "3.1.2"
   },
   "engines": {
