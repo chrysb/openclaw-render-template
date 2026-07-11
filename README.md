@@ -202,6 +202,31 @@ First time you DM the bot, it sends a pairing request. Approve it in the setup U
 
 The channel's env var is empty or missing. Go to the Envars tab, add the token, and save. The channel will be automatically enabled in the config.
 
+### If alphaclaw crashes at boot
+
+The container boots through `start.sh`, which runs `alphaclaw start` and — if it ever exits — falls back to a tiny failure-status HTTP server instead of crash-looping. The deploy stays **Live**, `/health` keeps answering 200, and the Render **Shell** tab stays reachable so you can debug:
+
+```sh
+cat /data/start.log               # full boot log (persisted on the disk)
+echo $PATH                        # what PATH alphaclaw inherits
+alphaclaw start                   # reproduce the failure with live output
+```
+
+The failure page itself never renders logs or env values (they can contain secrets) — it only points you to the Shell tab.
+
+### Container crash-looping (debug mode)
+
+If even the fallback isn't enough (e.g. you need a fully inert container), swap the Dockerfile `CMD` to the bundled `debug-start.sh`:
+
+```dockerfile
+COPY debug-start.sh /debug-start.sh
+RUN chmod +x /debug-start.sh
+# ... (other directives) ...
+CMD ["/debug-start.sh"]
+```
+
+`debug-start.sh` binds port 3000 with a bare listener so Render marks the deploy **Live** (unlocking the Shell tab), keeps PID 1 alive with `tail -f /dev/null`, and tees a full environment dump to `/data/debug.log` on the persistent disk. Restore `CMD ["/start.sh"]` after diagnosis.
+
 ## Links
 
 - [OpenClaw docs](https://docs.openclaw.ai)
