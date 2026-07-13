@@ -8,7 +8,12 @@
     "dev:stop": "docker compose down",
     "dev:clean": "docker compose down -v",
     "dev:logs": "docker compose logs -f",
-    "dev:shell": "docker compose exec openclaw bash"
+    "dev:shell": "docker compose exec openclaw bash",
+    "test": "npm run test:unit && npm run test:contract",
+    "test:unit": "node --test tests/unit/*.test.mjs",
+    "test:contract": "bats tests/contract/",
+    "test:e2e": "bats tests/e2e/",
+    "test:all": "npm run test && npm run test:e2e"
   },
   "dependencies": {
     "@chrysb/alphaclaw": "0.9.27"
